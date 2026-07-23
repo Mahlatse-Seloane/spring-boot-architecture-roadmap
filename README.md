@@ -10,7 +10,7 @@ This repository serves to help me better understand backend development, where e
 
 ## 🗺️ Project Roadmap & Progress
 
-### 🔹 Phase 1: Basic CRUD with In-Memory Collection
+### 🔹 Phase 1: Basic CRUD Operations
 * **Objective:** Establish core REST API endpoints and data transfer mechanics, while mastering the web request-response cycle, data serialization, and REST protocol standards.
 * **Key Features:** Implemented standard HTTP verbs (`GET`, `POST`, `PUT`, `DELETE`), DTO (Data Transfer Object) mapping patterns, and explicit `ResponseEntity` status management.
 
