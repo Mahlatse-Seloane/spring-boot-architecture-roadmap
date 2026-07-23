@@ -1,20 +1,30 @@
-# Spring Boot Architecture Roadmap
+# Evolution of a Spring Boot Application: From Basics to Enterprise
 
-> **Development Status: Active Architecture Study**
-> This repository documents a progressive backend roadmap designed to master production-grade Spring Boot architecture. The application is built incrementally, introducing advanced engineering concepts only when a structural problem needs to be solved.
+Welcome to my Spring Boot learning roadmap repository! 🚀
+
+Instead of building half-finished, completely unrelated projects, I decided to take a simple application - an **Employee Management System** - and iteratively rebuild it across multiple stages. Each phase introduces new advanced engineering concepts only when a structural problem inside the codebase needs to be solved.
+
+This repository serves to help me better understand backend development, where each phase marks a step forward in mastering production-grade Spring Boot architecture. The project goes from basic "it just works" code to a clean, well-structured application. By comparing the phases side by side, I can see exactly how and why modern design patterns help solve real-world problems.
 
 ---
 
-## 🚀 The Progressive Roadmap Architecture
+## 🗺️ Project Roadmap & Progress
 
-### 🔹 Milestone: HTTP & Concurrency Boundary
-* **Focus:** Mastering the web request-response cycle, data serialization, and REST protocol standards.
-* **Core Concepts:** Functionally pure object mapping, `ResponseEntity` status management, and thread-safe in-memory operations (`CopyOnWriteArrayList`, `AtomicLong`) to guarantee data integrity within Spring's multi-threaded Singleton controller environment.
+### 🔹 Phase 1: Basic CRUD with In-Memory Collection
+* **Objective:** Establish core REST API endpoints and data transfer mechanics, while mastering the web request-response cycle, data serialization, and REST protocol standards.
+* **Key Features:** Implemented standard HTTP verbs (`GET`, `POST`, `PUT`, `DELETE`), DTO (Data Transfer Object) mapping patterns, and explicit `ResponseEntity` status management.
 
-### 🔹 Milestone: Layered Service Architecture & Safety
-* **Focus:** Separating infrastructure from business rules to achieve strict Separation of Concerns.
-* **Core Concepts:** Decoupling code into distinct 3-Tier layers (Controllers, Services, Repositories) via Dependency Injection, implementing centralized Jakarta input validation, and constructing a Global Exception Handler (`@ControllerAdvice`) safety net.
+### 🔹 Phase 2: Introduction of the Database Layer (Repository Pattern)
+* **Objective:** Transition from temporary, volatile in-memory collections to robust relational database persistence.
+* **Key Features:** Integrated Spring Data JPA and replaced the manual collections with an abstract `EmployeeRepository` interface, laying the groundwork for true database persistence.
 
-### 🔹 Milestone: Relational Persistence Engines
-* **Focus:** Transitioning from temporary in-memory collections to robust database persistence without breaking existing application layers.
-* **Core Concepts:** Object-Relational Mapping (ORM) via Spring Data JPA, dual-engine database configurations (H2 for development testing and PostgreSQL for production environments), and versioned database schema migration controls.
+### 🔹 Phase 3: Transition to Layered Architecture
+* **Objective:** Separate web infrastructure from business rules to achieve strict **Separation of Concerns**.
+* **Key Features:** Decoupled code the monolithic controller into distinct 3-Tier architecture (Controllers, Services, Repositories) via Dependency Injection.
+
+---
+## 🛠️ Tech Stack & Skills Covered
+
+* **Framework:** Spring Boot (Spring Web, Spring Data JPA, Spring Security)
+* **Language:** Java (Streams, functional interfaces, Optionals)
+* **Concepts:** RESTful API Design, Repository Pattern, 3-Tier Layered Architecture, Data Encapsulation (DTOs)
